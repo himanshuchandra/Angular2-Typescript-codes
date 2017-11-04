@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<h1>{{message}}</h1>
+
+<input type="text" [value]="value" />
+
+<br/>
+2 way data binding (requires formsModule)
+<input type="text" [(ngModel)]="name">{{name}}
+
+<br/>
+<br/>
+
+custom 2 way binding
+
+<input type="text" [value]='initvalue' (input)="takeInput($event)">
+
+Result is:{{result}}
+
+<br/>
+Function Call
+<button (click)="showData()">Click</button>
+{{data}}
+
+<br/>
+
+<h1 [class]='style'>This is styled</h1>
+
+
