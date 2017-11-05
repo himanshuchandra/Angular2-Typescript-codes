@@ -4,6 +4,11 @@
 <input type="text" [value]="value" />
 
 <br/>
+1 way data binding (requires formsModule)(no update)
+<input type="text" [ngModel]="name">{{name}}
+
+<br/>
+<br/>
 2 way data binding (requires formsModule)
 <input type="text" [(ngModel)]="name">{{name}}
 
