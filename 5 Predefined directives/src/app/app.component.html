@@ -1,0 +1,42 @@
+<h1>Structural directives</h1>
+
+*ngFor *ngIf *ngSwitch
+
+<h1>Attribute directives</h1>
+
+[ngClass] [ngHidden] [ngStyle]
+<br> ---------------------------------------
+
+
+<div *ngFor="let item of itemList">
+  <li *ngIf="item.sno>12">
+    {{item.sno}}
+    <br> {{item.name}}
+    <br> {{item.price}}
+  </li>
+  <br>
+  <br>
+</div>
+
+
+ngSwitch example
+
+<div [ngSwitch]="myCase">
+  <p *ngSwitchCase="1">CAse 1</p>
+  <p *ngSwitchCase="2">Case 2</p>
+  <p *ngSwitchCase="3">Case 3</p>
+  <p *ngSwitchDefault>Unknown</p>
+</div>
+
+ngHidden example
+
+<button [hidden]="button" (click)="hideButton()">Hide this!</button>
+
+ngStyle example
+<div [style.color]="'orange'">style using property syntax, this text is orange</div>
+
+<p [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">Styled</p>
+
+<h1 [class]='style'>This is styled</h1>
+
+<h2 [ngClass]="{'cssStyle': redit}">Styling using ng-class</h2>
