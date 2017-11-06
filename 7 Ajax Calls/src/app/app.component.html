@@ -1,0 +1,9 @@
+<h1>Products are ::</h1>
+<button (click)="localCall()">Show Products</button>
+<button (click)="serverCall()">Show Products From Server</button>
+<ul *ngFor="let product of productList">
+    <li>
+        {{product.id}} {{product.name}} {{product.price}}
+        <img src="{{product.url}}" width="100" height="100">
+    </li>
+</ul>

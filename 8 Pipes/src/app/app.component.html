@@ -1,0 +1,12 @@
+<h1>Using Pipes</h1>
+<h2>Predefine Pipes</h2>
+Uppercase {{name|uppercase}}
+<br> Lowercase {{name|lowercase}}
+<br> Without Date Pipe {{currentDate}}
+<br>Current Date {{currentDate|date:'fullDate'}} Date can be short,long , fullTime and many more
+<br>Slice {{name|slice:0:3}}
+<br>JSON {{object|json}}
+<br>Title Case {{text|titlecase}}
+<br>Number {{salary| number:'3.2-5'}}
+<br>Currency {{salary|currency:'USD':true:'2.2-4'}}<br><br>
+<br>Custom Pipe {{name|portion:2:4}}
