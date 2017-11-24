@@ -1,0 +1,30 @@
+<h1>Using ref</h1>
+
+<input type="text" #fullNameRef [ngModel]="fullname"/>
+
+<button (click)="showName(fullNameRef.value)">Show name</button>
+{{name}}
+
+
+<h1>Validations</h1>
+
+<h3>Without form</h3>
+<input type="text" #username="ngModel" name="username" ngModel pattern="[a-z]"/>
+<!-- <div *ngIf="username.invalid" style="color: red">Required</div> -->
+<!-- <div *ngIf="username.pristine" style="color: red">Required</div> -->
+<!-- <div *ngIf="username.touched" style="color: red">Required</div -->
+<div *ngIf="username.dirty">Required</div>
+
+
+<h3>With form</h3>
+<form #form="ngForm">
+<input type="text" #userid="ngModel" name="userid" ngModel pattern="[0-9]" required/>
+  <button type="submit" [disabled]="form.invalid">Save</button>
+</form>
+
+<h1>Typescript ViewChild</h1>
+
+<p>Call child function and pass hello & set child variable value</p>
+<button (click)="updateChild()">Pass</button>
+
+<child></child>
