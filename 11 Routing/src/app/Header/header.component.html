@@ -1,0 +1,20 @@
+------------------------------------------------------------
+
+<h3>This is header</h3>
+
+<ul>
+  <li>
+    <a routerLink='/' routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  </li>
+  <li>
+    <a routerLink='child' routerLinkActive="active-link">Child</a>
+  </li>
+  <li>
+    <a [routerLink]='dynamicLink' routerLinkActive="active-link">Dynamic Link</a>
+  </li>
+  <li>
+    <a [routerLink]="['/shoes']">Shoes</a>
+  </li>
+</ul>
+
+------------------------------------------------------------
